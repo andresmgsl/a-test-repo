@@ -53,12 +53,15 @@
     /* ---------- Profile card ---------- */
     .card { text-align: center; padding: 48px 24px; max-width: 560px; }
     .avatar-ring {
+      display: block;
       width: 156px; height: 156px; margin: 0 auto 26px;
       border-radius: 50%; padding: 4px;
       background: conic-gradient(from 0deg, var(--accent), var(--accent3), var(--accent2), var(--accent));
       box-shadow: 0 0 44px rgba(255,77,0,0.5);
       animation: spin 8s linear infinite;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
+    a.avatar-ring:hover { transform: scale(1.05); box-shadow: 0 0 56px rgba(255,77,0,0.7); }
     @keyframes spin { to { transform: rotate(360deg); } }
     .avatar-ring img {
       width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;
@@ -96,9 +99,9 @@
   <div class="grid"></div>
 
   <main class="card">
-    <div class="avatar-ring">
-      <img src="https://avatars.githubusercontent.com/u/6069831?v=4" alt="Andres Guerrero" />
-    </div>
+    <a class="avatar-ring" href="https://github.com/andresmgsl" target="_blank" rel="noopener" title="Visit my GitHub profile">
+      <img src="https://avatars.githubusercontent.com/u/6069831?v=4" alt="Andres Guerrero — GitHub profile" />
+    </a>
     <h1>Andres Guerrero</h1>
     <p class="bio">Software Developer 💻 · Builder at @heavy-duty 👷</p>
     <p class="meta">📍 The world</p>
